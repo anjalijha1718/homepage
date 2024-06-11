@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with White Top Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            background-color: lightblue;
+            font-family: 'Product Sans', Arial, sans-serif;
+            background-image: linear-gradient(to right, #fff, #a0e3ec);
+            background-size: 100% 100%; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Do not repeat the gradient */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .top-bar {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-name {
+            margin: 0;
+            font-size: 24px;
+            color: black;
+        }
+        .get-started-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 70px;
+            font-family: 'Product Sans', Arial, sans-serif;
+            font-size: 16px;
+            margin-right: 50px;
+        }
+        .get-started-btn:hover {
+            background-color: #0056b3;
+        }
+        .main-heading {
+            margin: 40px 20px 0 20px; /* Space above and below the heading */
+            font-size: 60px;
+            color: #333;
+            text-align: center;
+            font-family: 'Product Sans', Arial, sans-serif;
+        }
+        .main-heading span {
+            display: block; /* Each line as a separate block */
+        }
+        .subheading {
+            margin: 20px 20px 0 20px; /* Space above the subheading */
+            font-size: 24px;
+            color: #666;
+            text-align: center;
+            font-family: 'Product Sans', Arial, sans-serif;
+        }
+        .center-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Space above the button */
+        }
+        .center-button a {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+        .center-button a:hover {
+            background-color: #333;
+        }
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the start */
+            padding: 40px 20px;
+        }
+        .left-content {
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+            font-size: 24px;
+            font-family: 'Product Sans', Arial, sans-serif;
+            color: #333;
+            margin-top: 60px;
+        }
+        .right-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center the image vertically */
+            padding-left: 20px;
+            margin-right: 30px;
+            font-family: 'Product Sans', Arial, sans-serif;
+        }
+        .right-content img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .owl-carousel .item {
+            background-color: rgba(48, 155, 179, 0.616);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            color: white;
+            font-family: 'Product Sans', Arial, sans-serif;
+            font-size: 18px;
+            width: 300px; /* Fixed width for uniform containers */
+            height: 400px; /* Fixed height for uniform containers */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; /* Space out the content */
+        }
+        .owl-carousel .item img {
+            width: 100%; /* Ensure the image fits within the container */
+            height: 200px; /* Fixed height for uniform images */
+            object-fit: cover; /* Ensure the image covers the area */
+            border-radius: 10px;
+        }
+        .key-features-heading {
+            font-size: 32px;
+            color: #333;
+            font-family: 'Product Sans', Arial, sans-serif;
+            margin-top: 40px;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .subheadings-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .subheadings-left, .subheadings-right {
+            flex: 1;
+        }
+        .subheadings-left h3, .subheadings-right h3 {
+            font-size: 24px;
+            color: #333;
+            font-family: 'Product Sans', Arial, sans-serif;
+            margin: 10px 0;
+        }
+        .subheadings-left p {
+            margin-right:50px;
+            margin-left: 50px;
+            margin-top:60 px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        } 
+        .subheadings-right p {
+            margin-left:50px;;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+        .about-us-section {
+            background-image: linear-gradient(to right, #fff, #d4dbdc);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .about-us-section h2 {
+            font-size: 32px;
+            color: #333;
+            font-family: 'Product Sans', Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+        .about-us-section p {
+            font-size: 18px;
+            color: #666;
+            font-family: 'Product Sans', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 40px;
+            }
+            .subheading {
+                font-size: 20px;
+            }
+            .content-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .left-content, .right-content {
+                padding: 0;
+                margin: 20px 0;
+                text-align: center;
+            }
+            .right-content img {
+                max-width: 80%;
+            }
+            .owl-carousel .item {
+                width: auto;
+                height: auto;
+            }
+            .subheadings-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .subheadings-left, .subheadings-right {
+                flex: none;
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
+            }
+            .subheadings-left p, .subheadings-right p {
+                margin: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 30px;
+            }
+            .subheading {
+                font-size: 16px;
+            }
+            .get-started-btn {
+                padding: 10px;
+                font-size: 14px;
+                margin-right: 20px;
+            }
+            .center-button a {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .key-features-heading {
+                font-size: 24px;
+                padding-left: 10px;
+            }
+            .about-us-section h2 {
+                font-size: 24px;
+            }
+            .about-us-section p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <h1 class="site-name">Site Name</h1>
+        <a href="#" class="get-started-btn">Get Started</a>
+    </div>
+    <div class="main-heading">
+        <span>Transform Your Resume</span>
+        <span>into a Professional Website</span>
+        <span>in Minutes</span>
+    </div>
+    <div class="subheading">
+        <span>Create a stunning online presence effortlessly.</span>
+    </div>
+    <div class="center-button">
+        <a href="#">Upload file</a>
+    </div>
+    <div class="content-section">
+        <div class="owl-carousel" id="left-carousel">
+            <div class="item"> <!-- Add this div for each carousel item -->
+                <img src="images.img/Effortless_Transform.jpeg" alt="Image">
+                <h4>Effortless Transformation</h4>
+                <p>Instantly convert your resume into a professional website with just a few clicks. No coding skills required.</p>
+            </div>
+            <div class="item">
+                <img src="images.imgProf_Templates.jpeg" alt="Image">
+                <h4>Professional Templates:</h4>
+                <p>Choose from a variety of stunning, industry-specific templates designed to make your content stand out.</p>
+            </div>
+            <div class="item">
+                <img src="images.img/Customization.jpeg" alt="Image">
+                <h4>Customization Made Easy:</h4>
+                <p>Personalize your site with user-friendly tools to match your style and brand. Adjust colors, fonts, and layouts effortlessly.</p>
+            </div>
+            <div class="item">
+                <img src="images.img/Domain.jpeg" alt="Image">
+                <h4>Instant Domain Purchase:</h4>
+                <p>Secure a custom domain directly from our platform. No need to navigate multiple sites to get your site online.</p>
+            </div>
+            <div class="item">
+                <img src="images.img/Responsive_Design.jpeg" alt="Image">
+                <h4>Responsive Design:</h4>
+                <p>Ensure your website looks great on any device, from desktops to smartphones, with our responsive design features.</p>
+            </div>
+            <div class="item">
+                <img src="images.img/Affordable_Pricing.jpeg" alt="Image">
+                <h4>Affordable Pricing:</h4>
+                <p>Launch a professional website at a fraction of the cost compared to hiring a web developer or designer.</p>
+            </div>
+        </div>
+    </div>
+    <h2 class="key-features-heading">Key Features</h2>
+    <div class="subheadings-container">
+        <div class="subheadings-left">
+            <h3>💻 No Coding Required</h3>
+    <p>Absolutely no coding skills needed to create a professional-looking website.
+        Benefit: Accessible to everyone, regardless of technical expertise, making the process stress-free.</p>
+    <h3>🎨 Professional Templates</h3>
+    <p> A wide range of stunning, industry-specific templates.
+        Benefit: Users can quickly choose a template that best suits their profession and style, ensuring a polished look.</p>
+        </div>
+        <div class="subheadings-right">
+            <h3>🛠️ One-Stop Solution</h3>
+    <p>Everything from design to domain purchase and hosting on a single platform.
+        Benefit: Simplifies the process, providing convenience and saving users from the hassle of dealing with multiple services.</p>
+    <h3>✏️ Easy Customization</h3>
+    <p> User-friendly tools for easy site customization.
+        Benefit: Allows users to personalize their website to reflect their unique style and brand without technical knowledge.</p>
+
+        </div>
+    </div>
+    <div class="about-us-section">
+        <h2>About Us</h2>
+        <p>We are committed to helping you transform your resume into a professional online presence. Our easy-to-use platform ensures you can create a stunning website without any technical skills. Whether you're looking to impress potential employers or showcase your portfolio, our tools and templates are designed to help you stand out. Join thousands of satisfied users who have successfully launched their websites with us.     #Dummy </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#left-carousel").owlCarousel({
+                loop: true,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                dots: true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    },
+                    1400:{
+                        items:4
+                    }
+                },
+                items: 3,
+                navText: ['<', '>']
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
